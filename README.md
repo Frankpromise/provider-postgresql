@@ -8,7 +8,7 @@ This beginner-friendly guide walks you through generating a Crossplane provider 
 
 **Crossplane** is a Kubernetes-native infrastructure management tool. Instead of managing your infrastructure with Terraform directly, you define everything as Kubernetes manifests. **Upjet** helps you generate Crossplane providers from Terraform providers, reducing the effort to integrate with existing Terraform ecosystems.
 
-This guide adapts the official Upjet template to build a PostgreSQL Crossplane provider.
+This guide adapts the official Upjet postgresql to build a PostgreSQL Crossplane provider.
 
 ---
 
@@ -18,7 +18,7 @@ This guide adapts the official Upjet template to build a PostgreSQL Crossplane p
 
 You’re forking a boilerplate repo that scaffolds everything needed to create a new Crossplane provider based on a Terraform provider.
 
-1. Click "**Use this template**" on [upjet-provider-template](https://github.com/upbound/upjet-provider-template) to create a new repo named `provider-postgresql`.
+1. Click "**Use this postgresql**" on [provider-postgresql](https://github.com/Frankpromise/provider-postgresql) to create a new repo named `provider-postgresql`.
 
 2. Clone your repo locally and navigate into it:
 
