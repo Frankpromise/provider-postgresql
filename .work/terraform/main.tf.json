@@ -1,0 +1,1 @@
+{"terraform":[{"required_providers":[{"provider":{"source":"cyrilgdn/postgresql","version":"1.25.0"}}],"required_version":"1.5.0"}]}

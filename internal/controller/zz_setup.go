@@ -9,14 +9,12 @@ import (
 
 	"github.com/crossplane/upjet/pkg/controller"
 
-	database "github.com/frankpromise/provider-postgresql/internal/controller/db/database"
-	extension "github.com/frankpromise/provider-postgresql/internal/controller/extension/extension"
-	grant "github.com/frankpromise/provider-postgresql/internal/controller/grant/grant"
-	role "github.com/frankpromise/provider-postgresql/internal/controller/grant/role"
+	database "github.com/frankpromise/provider-postgresql/internal/controller/postgresql/database"
+	extension "github.com/frankpromise/provider-postgresql/internal/controller/postgresql/extension"
+	grant "github.com/frankpromise/provider-postgresql/internal/controller/postgresql/grant"
+	role "github.com/frankpromise/provider-postgresql/internal/controller/postgresql/role"
+	schema "github.com/frankpromise/provider-postgresql/internal/controller/postgresql/schema"
 	providerconfig "github.com/frankpromise/provider-postgresql/internal/controller/providerconfig"
-	rolerole "github.com/frankpromise/provider-postgresql/internal/controller/role/role"
-	schema "github.com/frankpromise/provider-postgresql/internal/controller/schema/schema"
-	mapping "github.com/frankpromise/provider-postgresql/internal/controller/user/mapping"
 )
 
 // Setup creates all controllers with the supplied logger and adds them to
@@ -27,10 +25,8 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		extension.Setup,
 		grant.Setup,
 		role.Setup,
-		providerconfig.Setup,
-		rolerole.Setup,
 		schema.Setup,
-		mapping.Setup,
+		providerconfig.Setup,
 	} {
 		if err := setup(mgr, o); err != nil {
 			return err
